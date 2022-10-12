@@ -8,8 +8,8 @@
   "params": [
     {
       "name": "zoom_level",
-      "value": 800,
-      "bind":{
+      "value": 250,
+      "bind": {
         "input": "range",
         "min": 0,
         "max": 800,
@@ -24,8 +24,9 @@
       "height": 600,
       "title": "World Crime Rate 2020",
       "projection": {
-        "type": "equirectangular", 
-        "scale": {"expr": "zoom_level"}},
+        "type": "equirectangular",
+        "scale": {"expr": "zoom_level"}
+      },
       "layer": [
         {
           "data": {
@@ -43,9 +44,7 @@
             }
           },
           "mark": {"type": "geoshape", "stroke": "#000000"},
-          "params": [
-            {"name": "country", "select": {"type": "point"}}
-          ],
+          "params": [{"name": "country", "select": {"type": "point"}}],
           "transform": [
             {
               "lookup": "properties.NAME",
@@ -59,17 +58,10 @@
             },
             {
               "joinaggregate": [
-                {
-                  "op": "sum",
-                  "field": "crimeIndex",
-                  "as": "Crime Number"
-                }
+                {"op": "sum", "field": "crimeIndex", "as": "Crime Number"}
               ]
             },
-            {
-              "calculate": "datum.crimeIndex",
-              "as": "Crime Number"
-            }
+            {"calculate": "datum.crimeIndex", "as": "Crime Number"}
           ],
           "encoding": {
             "color": {
@@ -93,12 +85,7 @@
                 "type": "quantitative",
                 "format": ".0f"
               },
-              {
-                "field": "Crime Number",
-                "type": "quantitative",
-                "format": ".2f"
-              }
-
+              {"field": "Crime Number", "type": "quantitative", "format": ".2f"}
             ]
           }
         },
@@ -114,6 +101,7 @@
   ],
   "config": {}
 }
+
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
