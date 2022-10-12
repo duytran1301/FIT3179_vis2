@@ -108,20 +108,51 @@
   "data": {
     "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/robberystate.csv"
   },
+  "params": [
+    {
+      "name": "select ",
+      
+    }
+  ],
   "vconcat": [
     {
-      "width": "container",
+      "width": 800,
       "height": 300,
-      "transform": [
-        {"filter": "datum.Type === 'Assault' "}],
-      "mark" : {"type":"bar", "size": 15, "opacity":1},
+      "title": "2018",
+      "transform": [{"filter": "datum.Year == 2018"}],
+      "mark": {"type": "bar", "size": 15, "opacity": 1},
       "encoding": {
         "x": {"field": "Commit Number", "aggregate": "mean"},
-        "y": {"field": "State", "type": "nominal", "sort":"-x"},
+        "y": {"field": "State", "type": "nominal", "sort": "-x"},
         "color": {"field": "State"},
-        "yOffset":{"field":"State", "type": "nominal", "sort":"-y"}
+        "yOffset": {"field": "Type", "type": "nominal", "sort": "-y"}
       }
-
+    },
+    {
+      "width": 800,
+      "height": 300,
+      "title": "2019",
+      "transform": [{"filter": "datum.Year == 2019"}],
+      "mark": {"type": "bar", "size": 15, "opacity": 1},
+      "encoding": {
+        "x": {"field": "Commit Number", "aggregate": "mean"},
+        "y": {"field": "State", "type": "nominal", "sort": "-x"},
+        "color": {"field": "State"},
+        "yOffset": {"field": "Type", "type": "nominal", "sort": "-y"}
+      }
+    },
+    {
+      "width": 800,
+      "height": 300,
+      "title": "2020",
+      "transform": [{"filter": "datum.Year == 2020"}],
+      "mark": {"type": "bar", "size": 15, "opacity": 1},
+      "encoding": {
+        "x": {"field": "Commit Number", "aggregate": "mean"},
+        "y": {"field": "State", "type": "nominal", "sort": "-x"},
+        "color": {"field": "State"},
+        "yOffset": {"field": "Type", "type": "nominal", "sort": "-y"}
+      }
     }
   ]
 }
