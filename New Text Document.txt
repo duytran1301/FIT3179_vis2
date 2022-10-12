@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Choropleth map with bar chart",
+  "title": "",
   "data": {
     "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -22,7 +22,7 @@
     {
       "width": 800,
       "height": 600,
-      "title": "Percentage of Total Music Streams on Spotify by Country from January 2017 - February 2022",
+      "title": "World Crime Rate 2020",
       "projection": {
         "type": "equirectangular", 
         "scale": {"expr": "zoom_level"}},
@@ -44,7 +44,7 @@
           },
           "mark": {"type": "geoshape", "stroke": "#000000"},
           "params": [
-            {"name": "country_selection", "select": {"type": "point"}}
+            {"name": "country", "select": {"type": "point"}}
           ],
           "transform": [
             {
@@ -77,7 +77,7 @@
               "type": "quantitative",
               "scale": {
                 "type": "threshold",
-                "domain": [0, 10, 35, 40, 45, 55, 60, 65, 70],
+                "domain": [0, 10, 35, 40, 45, 50, 55, 60, 65, 70],
                 "scheme": "reds"
               }
             },
@@ -114,7 +114,6 @@
   ],
   "config": {}
 }
-
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
