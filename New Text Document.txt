@@ -102,3 +102,28 @@
     ]
   }
 }
+
+
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/robberystate.csv"
+  },
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 300,
+      "transform": [
+        {"filter": "datum.Type === 'Assault' "}],
+      "mark" : {"type":"bar", "size": 15, "opacity":1},
+      "encoding": {
+        "x": {"field": "Commit Number", "aggregate": "mean"},
+        "y": {"field": "State", "type": "nominal", "sort":"-x"},
+        "color": {"field": "State"},
+        "yOffset":{"field":"State", "type": "nominal", "sort":"-y"}
+      }
+
+    }
+  ]
+}
