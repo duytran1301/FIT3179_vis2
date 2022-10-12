@@ -27,7 +27,7 @@
               "feature": "ne_110m_admin_0_countries"
             }
           },
-          "mark": {"type": "geoshape", "stroke": "gray"},
+          "mark": {"type": "geoshape", "stroke": "#000000"},
           "params": [
             {"name": "country_selection", "select": {"type": "point"}}
           ],
