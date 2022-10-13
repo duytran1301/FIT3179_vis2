@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "",
+  "title": "World Crime Rate 2020",
   "data": {
     "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
