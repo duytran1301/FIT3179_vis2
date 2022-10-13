@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "World Crime Rate 2021",
   "width": 600,
-  "height": 400,
+  "height": 100,
   "signals": [
     {"name": "tx", "update": "width / 2"},
     {"name": "ty", "update": "height / 2"},

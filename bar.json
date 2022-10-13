@@ -6,7 +6,7 @@
   "params": [{"name": "select "}],
   "vconcat": [
     {
-      "width": 800,
+      "width": 600,
       "height": 300,
       "title": "2018",
       "transform": [{"filter": "datum.Year == 2018"}],
@@ -19,7 +19,7 @@
       }
     },
     {
-      "width": 800,
+      "width": 600,
       "height": 300,
       "title": "2019",
       "transform": [{"filter": "datum.Year == 2019"}],
@@ -32,7 +32,7 @@
       }
     },
     {
-      "width": 800,
+      "width": 600,
       "height": 300,
       "title": "2020",
       "transform": [{"filter": "datum.Year == 2020"}],
