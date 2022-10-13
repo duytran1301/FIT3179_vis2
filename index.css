@@ -53,11 +53,18 @@ body {
     padding-right: 80px;
     padding-top: 40px;
   }
+  #vis1 {
+    background-color: white;
+    padding: 8px;
+    width: fit-content;
+    display:block;
+    margin:auto;
+  }
   
-  #vis1, #vis2, #vis3, #vis4 {
+  #vis2, #vis3, #vis4 {
     background-color: white;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     display:block;
     margin:auto;
   }
