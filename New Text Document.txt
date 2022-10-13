@@ -133,3 +133,66 @@
   ],
   "config": {}
 }
+
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australia Min Drug Price (AUD)",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/Agora.csv"
+  },
+  "params": [
+    {
+      "name": "highlight",
+      "select" : {"type": "point", "on": "mouseover"}
+    },
+    {
+      "name": "select",
+      "select": "point"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "fill": "red",
+    "stroke": "black",
+    "cursor": "pointer",
+  },
+  "encoding": {
+    "x": {
+      "field": "Category", 
+      "type": "ordinal", 
+      "title": "Drug Type",
+      "sort": "y"},
+    "y": {
+      "field": "Price_in_AUD",
+      "title": "Price (AUD)",
+      "type": "quantitative", 
+      "aggregate":"mean"},
+      "fillOpacity": {
+        "condition": {"param": "select", "value": 1},
+        "value": 0.3
+      },
+      "strokeWidth": {
+        "condition": [
+          {
+            "param": "select",
+            "empty": false,
+            "value": 2
+          },
+          {
+            "param": "highlight",
+            "empty": false,
+            "value": 1
+          }
+        ],
+        "value": 0
+      }
+  },
+  "config": {
+    "scale": {
+      "bandPaddingInner": 0.2
+    }
+  }
+}
