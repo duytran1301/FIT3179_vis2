@@ -274,7 +274,7 @@
               "field":"Category", 
               "type": "nominal",
               "title": "Drug Category",
-              "scale": {"scheme": "category20b"},
+              "scale": {"scheme": "reds"}
             },
             "tooltip": [
               {"field" : "Category", "type": "nominal"},
