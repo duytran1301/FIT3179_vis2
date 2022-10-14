@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australia Crime Rate Over Decades",
+  "width": 550,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/australia-crime-rate-statistics.csv"
+  },
+  "params": [{"name": "brush", "select": "interval"}],
+  "transform": [{"window": [{"op": "row_number", "as": "row_number"}]}],
+  "config": {"mark": {"width": 15}},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelAngle": 90,
+        "labelPadding": 10
+      }
+    },
+    "y": {
+      "title": "Annual Crime Rate (%)",
+      "field": "AnnualChange",
+      "type": "quantitative",
+      "scale": {"padding": 10},
+      "axis": {
+        "gridColor": {
+          "condition": {"test": "datum.value === 0 ", "value": "black"},
+          "value": "#ddd"
+        }
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "fill": {"expr": "datum.AnnualChange < 0 ?'green': 'red'"}
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "Year", "type": "ordinal"},
+          {
+            "field": "AnnualChange",
+            "type": "quantitative",
+            "title": "Crime Rate Change"
+          }
+        ]
+      }
+    }
+  ]
+}
