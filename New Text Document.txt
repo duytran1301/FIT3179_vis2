@@ -196,3 +196,110 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/Agora.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "count_*"}],
+      "groupby": ["Category", "Rank"]
+    },
+    {
+      "stack": "count_*",
+      "groupby": [],
+      "as": ["stack_count_Category1", "stack_count_Category2"],
+      "offset": "normalize",
+      "sort": [{"field": "Category", "order": "descending"}]
+    },
+    {
+      "window": [
+        {"op": "min", "field": "stack_count_Category1", "as": "x"},
+        {"op": "max", "field": "stack_count_Category2", "as": "x2"},
+        {"op": "dense_rank", "as": "rank_Rank"},
+        {"op": "distinct", "field": "Rank", "as": "distinct_Rank"}
+      ],
+      "groupby": ["Category"],
+      "frame": [null, null],
+      "sort": [{"field": "Rank", "order": "descending"}]
+    },
+    {
+      "window": [{"op": "dense_rank", "as": "rank_Category"}],
+      "frame": [null, null],
+      "sort": [{"field": "Category", "order": "descending"}]
+    },
+    {
+      "stack": "count_*",
+      "groupby": ["Category"],
+      "as": ["y", "y2"],
+      "offset": "normalize",
+      "sort": [{"field": "Rank", "order": "descending"}]
+    },
+    {
+      "calculate": "datum.y + (datum.rank_Rank -1)* datum.distinct_Rank *0.001/ 3",
+      "as": "ny"
+    },
+    {
+      "calculate": "datum.y2 + (datum.rank_Rank - 1) * datum.distinct_Rank * 0.001/3 ",
+      "as": "ny2"
+    },
+    {"calculate": "datum.x + (datum.rank_Category -1)* 0.001", "as": "nx"},
+    {"calculate": "datum.x2 + (datum.rank_Category -1)* 0.001", "as": "nx2"},
+    {"calculate": "(datum.x+ datum.x2)/2", "as": "xc"},
+    {"calculate": "(datum.y + datum.y2)/2", "as": "yc"}
+  ],
+  "vconcat": [
+    {
+      "mark":{"type": "text","baseline": "middle", "align":"center"},
+      "encoding": {
+        "x": {
+          "aggregate":"min",
+          "field": "xc",
+          "title": "Category",
+          "axis": {"orient" :"top"},
+        },
+        "color": {"field": "Category", "legend":null},
+        "text": {"field": "Category"}
+      }
+    },
+    {
+      "layer": [
+        {
+          "mark" :{"type": "rect"},
+          "encoding": {
+            "x": {"field": "nx","type": "quantitative", "axis":null},
+            "x2": {"field": "nx2"},
+            "y": {"field": "ny", "type": "quantitative"},
+            "y2": {"field" :"ny2"},
+            "color": { 
+              "field":"Category", 
+              "type": "nominal", 
+              "legend": null
+            },
+            "tooltip": [
+              {"field" : "Category", "type": "nominal"},
+              {"field": "Rank", "type": "nominal"}
+            ]
+          }
+        }
+      ]
+    
+    }
+  ],
+  "resolve": {"scale": {"x": "shared"}},
+  "config": {
+    "view": {"stroke": ""},
+    "concat": {"spacing": 10},
+    "axis": {"domain": false, "ticks": false, "labels": false, "grid": false}
+  }
+}
