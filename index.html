@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Crime</title>
+<title>Australia Crime Information</title>
 
     <!--PureCSS-->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
@@ -27,23 +27,33 @@
   <div class="container">
     <div class = "header-container">
       <div class="header">
-        <img src="pexels-kat-wilcox-923681.jpg" alt="Tape with words in Crime Scene">
-        <h1 class = "title">The Effect Of Covid To Crime</h1>
+        <img src="handjail2.jpg" alt="Tape with words in Crime Scene">
+        <h1 class = "title">Is Australia Crime Getting </h1>
         <h2 class = "subtitle">Nhat Duy Tran</h2>
       </div>
     </div>  
     <div class="line">
     </div>
-    
+    <h2>Global Crime Rate</h2>
     <div class = "contents">
-      <div class="content-1">
-        <h2>Global Crime Rate</h2>
-        <p>
-          Australia is one of many countries that vastly support employment policy. According to Moovaz (2021), Australia is ranked 13 in the safest country to live among 163 countries. One of the main properties that cause the reduction is Covid-19. But high crime rates are often associated with poverty, unemployment, low levels of educational attainment, family relationship problems and high levels of drug use. The crime prevalence depends on the availability and the potential rewards, (ABS, 2010). Therefore, the country whose economy mostly depends on natural resources increases the punishment for violation activities. Yet the Australian crime rate threshold remains high in the ranking (Moovaz , 2020). The visualisation below shows the world crime rate different within Australia.
-
-        </p>
+      
+      <div class="content-1-2">
         <div id="vis1"></div>
       </div>
+      <div class="content-1-3">  
+        <p>
+          Australia is one of many countries that vastly support employment policy. 
+          According to Moovaz (2021), Australia is ranked 13 in the safest country to live among 163 countries.
+          One of the main properties that cause the reduction is Covid-19. But high crime rates are often associated with poverty, unemployment, low levels of educational attainment, 
+          family relationship problems and high levels of drug use. The crime prevalence depends on the availability and the potential rewards, (ABS, 2010). 
+          Therefore, the country whose economy mostly depends on natural resources increases the punishment for violation activities. 
+          Yet the Australian crime rate threshold remains high in the ranking (Moovaz , 2020). 
+          The visualisation below shows the world crime rate different within Australia.
+        </p>
+      </div>
+
+        
+      
 
       <div class="content-4">
         <h4>Something about crime</h4>
@@ -106,12 +116,12 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var spec2 = "";
+  var spec2 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/MosaicMap.vl.json";
   vegaEmbed('#vis2', spec2, {"actions": false}).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  var spec3 = "";
+  var spec3 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/MosaicMap.vl.json";
   vegaEmbed('#vis3', spec3, {"actions": false}).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
