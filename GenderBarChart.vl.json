@@ -34,7 +34,7 @@
     "tooltip": [
       {"field": "Gender", "type": "nominal"},
       {
-        "field": "Capital_City_pop",
+        "field": "Gender Rate",
         "type": "quantitative",
         "title": "Capital City Population",
         "format": "s"
