@@ -49,5 +49,9 @@
       "value": 0
     }
   },
-  "config": {"scale": {"bandPaddingInner": 0.05}, "axis": {"gridColor": null}}
+  "config": {
+    "scale": {"bandPaddingInner": 0.05},
+    "axis": {"gridColor": null},
+    "background": "#828385"
+  }
 }
