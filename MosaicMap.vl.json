@@ -61,7 +61,7 @@
           "encoding": {
             "x": {"field": "nx", "type": "quantitative", "axis": null},
             "x2": {"field": "nx2"},
-            "y": {"field": "ny", "type": "quantitative"},
+            "y": {"field": "ny", "type": "quantitative" ,"axis": null},
             "y2": {"field": "ny2"},
             "color": {
               "field": "Category",
@@ -83,6 +83,7 @@
   "config": {
     "view": {"stroke": ""},
     "concat": {"spacing": 10},
-    "axis": {"domain": false, "ticks": false, "labels": false, "grid": false}
+    "axis": {"domain": false, "ticks": false, "labels": false, "grid": false},
+    "background": "#f5f5f5"
   }
 }
