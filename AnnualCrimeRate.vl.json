@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Australia Crime Rate Over Decades",
+  "title": {"text":"Australia Crime Rate Over Decades","fontSize":20},
   "width": 550,
   "height": 300,
   "data": {
@@ -16,8 +16,10 @@
       "axis": {
         "domain": false,
         "ticks": false,
-        "labelAngle": 90,
-        "labelPadding": 10
+        "labelAngle": -65,
+        "labelPadding": 10,
+        "labelFontSize":13,
+        "titleFontSize": 20
       }
     },
     "y": {
@@ -29,7 +31,9 @@
         "gridColor": {
           "condition": {"test": "datum.value === 0 ", "value": "black"},
           "value": "#ddd"
-        }
+        },
+        "labelFontSize": 13,
+        "titleFontSize":17
       }
     }
   },

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Australia Gender Crime Rate In City",
+  "title": {"text":"Australia Gender Crime Rate In City", "fontSize":20,"align": "center"},
   "data": {
     "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/Age%20and%20sex%20distribution.csv"
   },
@@ -25,11 +25,11 @@
       "stack": "normalize",
       "axis": null
     },
-    "y": {"field": "Age group"},
+    "y": {"field": "Age group", "title": "Age Group", "axis":{"labelFontSize": 15,"titleFontSize":17}},
     "color": {
       "field": "Gender",
       "scale": {"range": ["#FDA4BA", "#2832C2"]},
-      "legend": {"orient": "top", "title": null}
+      "legend": {"orient": "top", "title": null, "labelFontSize": 15}
     },
     "tooltip": [
       {"field": "Gender", "type": "nominal"},

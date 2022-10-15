@@ -71,8 +71,7 @@
             },
             "tooltip": [
               {"field": "Category", "type": "nominal"},
-              {"field": "Rank", "type": "nominal"},
-              {"field": "Pice_in_AUD", "type": "quantitative"}
+              {"field": "Rank", "type": "nominal"}
             ]
           }
         }
@@ -84,6 +83,8 @@
     "view": {"stroke": ""},
     "concat": {"spacing": 10},
     "axis": {"domain": false, "ticks": false, "labels": false, "grid": false},
+    "legend": {"labelFontSize": 15, "titleFontSize": 17},
+
     "background": "#f5f5f5"
   }
 }
