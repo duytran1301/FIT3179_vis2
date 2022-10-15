@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australia Gender Crime Rate In City",
+  "data": {
+    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/Age%20and%20sex%20distribution.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Gender == 'Male' ? datum.Capital_City_pop*0.03 : datum.Capital_City_pop*0.0091",
+      "as": "Gender Rate"
+    }
+  ],
+  "params": [
+    {"name": "highlight", "select": {"type": "point", "on": "mouseover"}},
+    {"name": "select", "select": "point"}
+  ],
+  "mark": {"type": "bar", "cursor": "pointer"},
+  "width": 300,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "aggregate": "sum",
+      "field": "Gender Rate",
+      "title": "Capital City Population",
+      "stack": "normalize",
+      "axis": null
+    },
+    "y": {"field": "Age group"},
+    "color": {
+      "field": "Gender",
+      "scale": {"range": ["#FDA4BA", "#2832C2"]},
+      "legend": {"orient": "top", "title": null}
+    },
+    "tooltip": [
+      {"field": "Gender", "type": "nominal"},
+      {
+        "field": "Capital_City_pop",
+        "type": "quantitative",
+        "title": "Capital City Population",
+        "format": "s"
+      }
+    ],
+    "fillOpacity": {"condition": {"param": "select", "value": 1}, "value": 0.3},
+    "strokeWidth": {
+      "condition": [
+        {"param": "select", "empty": false, "value": 2},
+        {"param": "highlight", "empty": false, "value": 1}
+      ],
+      "value": 0
+    }
+  },
+  "config": {"scale": {"bandPaddingInner": 0.05}, "axis": {"gridColor": null}}
+}
