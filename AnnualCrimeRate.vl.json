@@ -50,5 +50,7 @@
         ]
       }
     }
-  ]
+  ],
+  "background": "#fafafa",
+  "view": {"stroke": "#fafafa"}
 }
