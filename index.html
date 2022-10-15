@@ -2,135 +2,169 @@
 <html lang="en">
 
 <head>
-<title>Australia Crime Information</title>
+  <title>Australia Crime Information</title>
 
-    <!--PureCSS-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!--Custom Fonts - from Google Fonts [Work Sans - Regular]-->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&display=swap" rel="stylesheet"> 
+  <!--PureCSS-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--My Custom CSS-->
-    <link rel="stylesheet" href="index.css">
+  <!--Custom Fonts - from Google Fonts [Work Sans - Regular]-->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans&display=swap" rel="stylesheet">
 
-    <!--Import Vega/Vega-Lite Libraries-->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <!--My Custom CSS-->
+  <link rel="stylesheet" href="index.css">
 
-    <!--Favicon-->
-    <link rel="icon" type="image/png" href="assets/departure.png"/>
+  <!--Import Vega/Vega-Lite Libraries-->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class = "header-container">
-      <div class="header">
-        <img src="handjail2.jpg" alt="Tape with words in Crime Scene">
-        <h1 class = "title">Is Australia Crime Getting </h1>
-        <h2 class = "subtitle">Nhat Duy Tran</h2>
-      </div>
-    </div>  
-    <div class="line">
-    </div>
-    <h2>Global Crime Rate</h2>
-    <div class = "contents">
-      
-      <div class="content-1-2">
-        <div id="vis1"></div>
-      </div>
-      <div class="content-1-3">  
+  <!-- Heading/subtitle info -->
+  <div class="page">
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1 text-align="center">Is Australia Crime Under Control?</h1>
         <p>
-          Australia is one of many countries that vastly support employment policy. 
+          Australia is one of many countries that vastly support employment policy.
           According to Moovaz (2021), Australia is ranked 13 in the safest country to live among 163 countries.
-          One of the main properties that cause the reduction is Covid-19. But high crime rates are often associated with poverty, unemployment, low levels of educational attainment, 
-          family relationship problems and high levels of drug use. The crime prevalence depends on the availability and the potential rewards, (ABS, 2010). 
-          Therefore, the country whose economy mostly depends on natural resources increases the punishment for violation activities. 
-          Yet the Australian crime rate threshold remains high in the ranking (Moovaz , 2020). 
-          The visualisation below shows the world crime rate different within Australia.
+          One of the main properties that cause the reduction is Covid-19. But high crime rates are often associated
+          with poverty, unemployment, low levels of educational attainment,
+          family relationship problems and high levels of drug use. The crime prevalence depends on the availability and
+          the potential rewards, (ABS, 2010).
         </p>
       </div>
+    </div>
 
-        
-      
-
-      <div class="content-4">
-        <h4>Something about crime</h4>
-        <p>
-            Crime<mark> Astralia
-        </p>
-        <div id="vis2"></div>
+    <!-- First block -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div class="vis_container" id="vis1"></div>
       </div>
-
-      <div class="content-5">
-        <h4>Crime data</h4>
-        <p>
-          Crime<mark class="blue">Crime</mark>Solution
-        </p>
-        <div id="vis4"></div>
+      <div class="pure-u-1-3">
+        <div class="description description_right">
+          <p>
+            In a typical year, the fire season in Australia begins around October in most
+            states, with some small fires occurring as early as July. However in 2019,
+            widespread burning occurred throughout parts of Queensland and New South Wales,
+            during the month of September, with numerous fires in other parts of the country.
+            The map to the left shows the locations of probable fires in during the months of
+            August and September in 2019.
+          </p>
+          <p>
+            In the map, the brightness corresponds roughly to how hot the fire is, offset by
+            how emissive the surface of the Earth is at the location the fire
+            is burning at. More information can be found
+            <a href="https://en.wikipedia.org/wiki/Brightness_temperature">here</a>.
+          </p>
+        </div>
       </div>
+    </div>
 
-      <div class="content-7">
-        <h2>Post Covid Affect on Crime</h2>
-        <p>
-            Covid 
-        </p>
+    <!-- Second block -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description_left">
+          <p>
+            The mosaic mark visualisation is the sale of different type of drugs record in rank. 
+            The length and the thickness of drugs shows sales data and ranking in drugs. 
+          </p>
+          <p>
+            Therefore, in this case rank A ecstasy having the highest sales in the among other drugs. 
+            Because of pandemic to the world, the demand on drugs results in rising stress and since the resilience-promoting activities like social interaction or physical improvement is prohibit as considered unsafe (Abramson, 2022). 
+          </p>
+          <div class="space-short"></div>
+          <p>
+            Therefore, many illegal drug overdoses cases increased. 
+            (Abramson, 2022) states that the unavailability of medical care also effects on the drug uses.
+          </p>
+        </div>
       </div>
-
-      <div class="content-2">
-        <h4>How they effect <mark class="blue">Pre</mark> & <mark class="red">Post</mark> COVID</h4>
-        <p>
-          Crime <mark class="blue">crime</mark> crime <b>Vis about the crime </b>
-        </p>
-        <div id="vis1"></div>
+      <div class="pure-u-2-3 second">
+        <div class="vis_container" id="vis2"></div>
       </div>
+    </div>
 
-      <div class="content-3">
-        <h4>Policy Solution</h4>
-        <p>
-          Vis about how covid effect</b>
-        </p>
-        <div id="vis3"></div>
+    <!-- Third block -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div class="vis_container" id="vis3"></div>
       </div>
-
-      <div class="content-3">
-        <h4>Summary</h4>
-        <p>
-          Crime and covid
-        </p>
+      <div class="pure-u-1-3">
+        <div class="description description_right">
+          <p>
+            However, comparing to many years before, crime rate is decreasing. 
+            The visualisation below shows the change of crime rate over 2 decades in Australia. 
+          </p>
+          <p>
+            As green bar is likely more and larger than red bar. 
+            Therefore, the crime rate is said to be decreasing due to the enhancement of policy in Australia. 
+            According to Australia government, the country granted fund for unemployment and hardship so that to supplies people when they needed. 
+            Therefore, crime prevention is getting better.
+            <a href="https://en.wikipedia.org/wiki/Thermal_radiation#Radiative_power">here</a>),
+          </p>
+          <p>
+            Since it's a long progress, crime is still happening in Australia, 
+            and it can't be denied that people will find solution to keep the drug prevalence continuously.
+          </p>
+        </div>
       </div>
+    </div>
 
-     </div>
-     
-     <div class="line"></div>
-     <div class="footer">
-      Nhat Duy Tran<br>
-      FIT3179: Data Visualisation 2<br>
-     </div>
+    <!-- Fourth block -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description_left">
+          <p>
+            The map to the right shows how the fires evolved in different locations over the
+            course of these two months. Use the bottom graph to select a period of time and
+            then move it around to see how the fires changed over time.
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div class="vis_container" id="vis4"></div>
+      </div>
+    </div>
+
+    <!-- Data source-->
+    <z>
+      Visualisation created by Troy Sutton.
+      The data used can be found
+      <a
+        href="https://www.kaggle.com/carlosparadis/fires-from-space-australia-and-new-zeland?select=fire_archive_M6_96619.csv">
+        here
+      </a>
+    </z>
   </div>
 
-<script type="text/javascript">
-  var spec1 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/orthoMap.vl.json";
-  vegaEmbed('#vis1', spec1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
 
-  var spec2 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/MosaicMap.vl.json";
-  vegaEmbed('#vis2', spec2, {"actions": false}).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
 
-  var spec3 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/MosaicMap.vl.json";
-  vegaEmbed('#vis3', spec3, {"actions": false}).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
 
-  var spec4 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/AnnualCrimeRate.vl.json";
-  vegaEmbed('#vis4', spec4, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+  <script type="text/javascript">
+    var spec1 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/orthoMap.vl.json";
+    vegaEmbed('#vis1', spec1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec2 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/MosaicMap.vl.json";
+    vegaEmbed('#vis2', spec2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec3 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/MosaicMap.vl.json";
+    vegaEmbed('#vis3', spec3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec4 = "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/AnnualCrimeRate.vl.json";
+    vegaEmbed('#vis4', spec4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
 
 </body>
+
 </html>
