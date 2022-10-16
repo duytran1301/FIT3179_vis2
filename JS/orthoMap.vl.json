@@ -47,18 +47,18 @@
         },
         {
           "joinaggregate": [
-            {"op": "sum", "field": "crimeIndex", "as": "Number Commit"}
+            {"op": "sum", "field": "crimeIndex", "as": "Crime Index"}
           ]
         },
-        {"calculate": "datum.crimeIndex", "as": "Number Commit"},
+        {"calculate": "datum.crimeIndex", "as": "Crime Index"},
         {
-          "calculate": "datum.population == 0 ? 'NAN' : datum.population*1000",
+          "calculate": "datum.population == 0 ? 'NaN' : datum.population*1000",
           "as": "population"
         }
       ],
       "encoding": {
         "color": {
-          "field": "Number Commit",
+          "field": "Crime Index",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
@@ -75,7 +75,7 @@
             "type": "quantitative",
             "format": ".0f"
           },
-          {"field": "Number Commit", "type": "quantitative", "format": ".2f"}
+          {"field": "Crime Index", "type": "quantitative", "format": ".2f"}
         ]
       }
     },
