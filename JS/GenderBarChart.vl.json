@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text":"Australia Gender Crime Rate In City", "fontSize":20,"align": "center"},
   "data": {
-    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/Age%20and%20sex%20distribution.csv"
+    "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ASSET/Age%20and%20sex%20distribution.csv"
   },
   "transform": [
     {

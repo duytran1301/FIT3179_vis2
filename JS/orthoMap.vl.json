@@ -22,14 +22,14 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ne_110m_ocean.json",
+        "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/JS/ne_110m_ocean.json",
         "format": {"type": "topojson", "feature": "oceans"}
       },
       "mark": {"type": "geoshape", "fill": "lightgrey", "stroke": null}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ne_110m_admin_0_countries.topojson",
+        "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/JS/ne_110m_admin_0_countries.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
       "mark": {"type": "geoshape", "stroke": "black"},
@@ -39,7 +39,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/csvData.csv"
+              "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ASSET/csvData.csv"
             },
             "key": "Name",
             "fields": ["crimeIndex", "population"]
@@ -81,7 +81,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/ne_110m.json",
+        "url": "https://raw.githubusercontent.com/duytran1301/FIT3179_vis2/main/JS/ne_110m_ocean.json",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
       },
       "mark": {"type": "geoshape", "fill": null, "stroke": "gray"}
