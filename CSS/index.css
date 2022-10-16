@@ -77,3 +77,10 @@ z{
 .rightpara{
   margin-left: 200px;
 }
+.foot {
+  background: #f5f5f5;
+  text-align: center;
+  color: black;
+  line-height: 1.15em;
+
+}
