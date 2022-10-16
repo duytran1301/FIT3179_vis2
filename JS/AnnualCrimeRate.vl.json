@@ -55,6 +55,6 @@
       }
     }
   ],
-  "background": "#fafafa",
-  "view": {"stroke": "#fafafa"}
+  "background": "#f5f5f5",
+  "view": {"stroke": "#f5f5f5"}
 }
